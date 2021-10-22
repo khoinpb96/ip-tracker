@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+header {
+  background: url(./image/pattern-bg.png) top center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 30px 0 80px;
+}
+.title {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  height: 53px;
+  input {
+    padding: 18px 20px;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: none;
+    outline: none;
+    min-width: 442px;
+  }
+  .enterBtn {
+    background: black;
+    border-radius: 0 0.5rem 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3;
+    &:hover {
+      background: #3f3f3f;
+    }
+  }
+}
+.result {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 988px;
+  width: 90%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  padding: 36px 0;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-35%);
+  z-index: 100;
+
+  div {
+    text-align: start;
+    padding: 0 28px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+    span {
+      font-size: 12px;
+      color: #969696;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    p {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 1rem;
+    }
+  }
+  div:nth-child(4) {
+    border-right: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: 280%;
+  }
+  .input {
+    width: 90%;
+    margin: 0 auto 42px;
+    input {
+      min-width: unset;
+      width: 100%;
+    }
+  }
+  .result {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 28px;
+    padding: 22px 0;
+    transform: translateX(-50%) translateY(-25%);
+    div {
+      border-right: unset;
+      text-align: center;
+    }
+  }
+}
