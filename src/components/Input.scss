@@ -1,0 +1,25 @@
+.input {
+  display: flex;
+  justify-content: center;
+  height: 53px;
+  input {
+    padding: 18px 20px;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: none;
+    outline: none;
+    min-width: 442px;
+  }
+  .enterBtn {
+    background: black;
+    border-radius: 0 0.5rem 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3;
+    &:hover {
+      background: #3f3f3f;
+    }
+  }
+}
